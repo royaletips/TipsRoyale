@@ -13,138 +13,80 @@
         <h1>👑 CLASH ROYALE: TIPS AND GUIDES FOR MASTERS 🏆</h1>
         <p>Strategies, decks, and advanced tricks to climb to the Legendary Arena.</p>
 
+        <div class="main-search-bar">
+            <input type="text" id="main-tip-search-input" placeholder="Wyszukaj globalnie tipy (np. Hog Cycle, P.E.K.K.A.)">
+            <button id="main-search-btn">Szukaj Tipów 🔎</button>
+        </div>
         <div class="user-auth-panel">
             <button id="show-register-btn">Zarejestruj się</button>
             <button id="show-login-btn">Zaloguj się</button>
             <button id="account-panel-btn" style="display: none;">Mój Panel Konta 👋</button>
             <button id="logout-btn" style="display: none;">Wyloguj</button>
         </div>
-        </header>
+
+    </header>
 
     <nav>
-        <ul>
-            <li><a href="#ekonomia">💰 Elixir Economy</a></li>
-            <li><a href="#karty">🧱 Categories & Archetypes</a></li>
-            <li><a href="#budowa">🛠️ Deck Building</a></li>
-            <li><a href="#tips-management">💡 Tips & Guides</a></li>
-            </ul>
-    </nav>
+        </nav>
 
     <main>
 
         <section id="login-form" class="section-card user-form" style="display: none;">
-            <h2>Zaloguj się do Panelu</h2>
-            <form id="login-data-form">
-                <label for="login-email">Email:</label>
-                <input type="email" id="login-email" name="email" required>
-                
-                <label for="login-password">Hasło:</label>
-                <input type="password" id="login-password" name="password" required>
-                
-                <button type="submit">Zaloguj</button>
-            </form>
-            <p id="login-message" style="color: red;"></p>
-        </section>
+            </section>
 
         <section id="register-form" class="section-card user-form" style="display: none;">
-            <h2>Załóż Nowe Konto</h2>
-            <form id="register-data-form">
-                <label for="register-username">Nazwa Użytkownika:</label>
-                <input type="text" id="register-username" name="username" required>
-
-                <label for="register-email">Email:</label>
-                <input type="email" id="register-email" name="email" required>
-                
-                <label for="register-password">Hasło:</label>
-                <input type="password" id="register-password" name="password" required>
-                
-                <button type="submit">Zarejestruj</button>
-            </form>
-            <p id="register-message" style="color: green;"></p>
-        </section>
-
-        <section id="account-panel" class="section-card user-panel" style="display: none;">
-            <h2>Mój Panel Konta <span id="welcome-user"></span></h2>
-            <p class="intro-text">Zarządzaj swoimi tipami i profilem.</p>
-
-            <div class="user-stats">
-                <p><strong>Twoje Tipów:</strong> <span id="user-tips-count">0</span></p>
-                <p><strong>Data Dołączenia:</strong> <span id="join-date">Nieznana</span></p>
-            </div>
-            
-            <div class="user-actions">
-                <button id="show-create-tip-btn">➕ Dodaj Nowego Tipa</button>
-                <button id="show-my-tips-btn">📋 Zobacz Moje Tipy</button>
-            </div>
-            
-            <div id="create-tip-area" style="display: none; margin-top: 20px;">
-                <h3>Dodaj Nowego Tipa Clash Royale</h3>
-                <form id="create-tip-form">
-                    <label for="tip-title">Tytuł Tipa:</label>
-                    <input type="text" id="tip-title" required>
-                    
-                    <label for="tip-category">Kategoria:</label>
-                    <select id="tip-category" required>
-                        <option value="economy">💰 Elixir Economy</option>
-                        <option value="decks">🛠️ Deck Building</option>
-                        <option value="combat">⚔️ Solo Tricks</option>
-                        <option value="general">Ogólne</option>
-                    </select>
-                    
-                    <label for="tip-content">Treść Tipa:</label>
-                    <textarea id="tip-content" rows="5" required></textarea>
-                    
-                    <button type="submit">Opublikuj Tipa</button>
-                </form>
-            </div>
-
-            <div id="my-tips-area" style="display: none; margin-top: 20px;">
-                <h3>Twoje Opublikowane Tipy</h3>
-                <ul id="my-tips-list">
-                    </ul>
-            </div>
-        </section>
-        <section id="ekonomia" class="section-card">
-            <h2>I. 💰 Elixir Economy and Card Cycle</h2>
-            <p class="intro-text">The most important rule: Elixir is gold. Never let it go to waste by sitting at 10/10!</p>
-            <div class="tip-grid">...</div>
-        </section>
-        
-        <blockquote class="master-quote">...</blockquote>
-
-        <section id="karty" class="section-card">
-            <h2>II. 🧱 Card Categories and Deck Archetypes</h2>
-            <p class="intro-text">Understanding the opponent's deck type is key to victory. Counter the style, not just the single card!</p>
             </section>
 
         <section id="tips-management" class="section-card">
             <h2>💡 Tipy Społeczności i Wyszukiwanie</h2>
             <p class="intro-text">Sprawdź, jakie strategie i triki dodali inni Mistrzowie Areny!</p>
 
-            <div class="search-area">
-                <input type="text" id="tip-search-input" placeholder="Wyszukaj po tytule lub kategorii...">
-                <button id="search-tips-btn">Szukaj</button>
-            </div>
-
             <div id="all-tips-list" class="tip-grid" style="margin-top: 20px;">
-                <div class="tip-item community-tip" data-category="combat">
-                    <h3>Szybkie Przeciwstawienie Lavy</h3>
-                    <p>Zawsze miej Inferno Dragon lub P.E.K.K.A. gotowe na Lavę. Użyj Tego samego (ID/Pekka) na Tank (Lava) i dodaj Zap na support (np. Minions).</p>
-                    <small>Kategoria: ⚔️ Solo Tricks | Autor: ProGamerPL</small>
                 </div>
-                
-                <div class="tip-item community-tip" data-category="economy">
-                    <h3>3-Crown Risk</h3>
-                    <p>W końcówce, jeśli masz przewagę HP na wieżach, nie spiesz się z atakiem. Czekaj na błąd przeciwnika, aby wygrać na przewagę Eliksiru i 1 koronę, zamiast ryzykować kontrę na 3 korony.</p>
-                    <small>Kategoria: 💰 Elixir Economy | Autor: KingSlayer</small>
-                </div>
-                
-            </div>
         </section>
-        </main>
 
-    <footer>...</footer>
-    
+    </main>
+
+    <footer>
+        </footer>
+
+    <div id="account-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <section id="account-panel" class="user-panel">
+                <h2>Mój Panel Konta <span id="welcome-user"></span></h2>
+                <p class="intro-text">Zarządzaj swoimi tipami i profilem.</p>
+
+                <div class="user-stats">
+                    <p><strong>Nazwa Użytkownika:</strong> <span id="display-username"></span></p>
+                    <p><strong>Twoje Tipów:</strong> <span id="user-tips-count">0</span></p>
+                    <p><strong>Opis Konta:</strong> <span id="user-description-display">Brak opisu</span></p>
+                </div>
+                
+                <div class="user-actions">
+                    <button id="show-create-tip-btn">➕ Dodaj Nowego Tipa</button>
+                    <button id="show-my-tips-btn">📋 Zobacz Moje Tipy</button>
+                    <button id="show-edit-profile-btn">⚙️ Edytuj Profil</button> </div>
+                
+                <div id="create-tip-area" style="display: none; margin-top: 20px;">
+                    </div>
+
+                <div id="my-tips-area" style="display: none; margin-top: 20px;">
+                    </div>
+                
+                <div id="edit-profile-area" style="display: none; margin-top: 20px;">
+                    <h3>Edytuj Profil</h3>
+                    <form id="edit-profile-form">
+                        <label for="edit-description">Opis Konta (Max 150 znaków):</label>
+                        <textarea id="edit-description" rows="3" maxlength="150"></textarea>
+                        <button type="submit">Zapisz Zmiany</button>
+                    </form>
+                </div>
+                </section>
+        </div>
+    </div>
     <script src="app.js"></script>
-    </body>
+
+</body>
 </html>
