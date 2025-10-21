@@ -1,3 +1,217 @@
+/* === OGÓLNE STYLES TŁO I CZCIONKI === */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f9d71c; /* Złoty, królewski kolor */
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #ff9900;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* === GŁÓWNA NAWIGACJA === */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9d71c;
+}
+
+/* === OBSZAR GŁÓWNY === */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* === KARTA SEKCJI (ORYGINALNY DESIGN) === */
+.section-card {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007bff; /* Niebieski akcent */
+}
+
+.section-card h2 {
+    color: #007bff;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.intro-text {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* === SIATKA I ELEMENTY TIPÓW === */
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tip-item {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 3px solid #f9d71c;
+}
+
+.tip-item h3 {
+    color: #333;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+/* === CYTAT === */
+.master-quote {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.master-quote cite {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #dc3545;
+}
+
+/* === TABELA KATEGORII KART === */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* === ARCHEOTYPY DECKÓW === */
+.archetype-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.archetype-item {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.archetype-item h4 {
+    color: #dc3545; /* Czerwony akcent */
+    margin-top: 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+/* === ZAAWANSOWANE TRIKI === */
+.advanced-tip-list article {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px dashed #007bff;
+}
+
+.advanced-tip-list h3 {
+    color: #dc3545;
+}
+
+/* === SEKCJE SPECYFICZNE === */
+.gold-section {
+    border-left: 5px solid #ffc107;
+}
+
+.teamplay-section {
+    border-left: 5px solid #28a745;
+}
+
+.tip-list-vertical li {
+    background-color: #e9f5ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #007bff;
+    list-style: none;
+}
+
+/* === STOPKA === */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* ============================================== */
+/* === DODATKOWE STYLE (PASEK WYSZUKIWANIA I MODAL) === */
+/* ============================================== */
+
 /* === Główny Pasek Wyszukiwania na Headerze === */
 .main-search-bar {
     display: flex;
@@ -83,4 +297,94 @@
 #edit-profile-area button {
     background-color: #337ab7;
     width: 100%;
+}
+
+/* === Panel Autoryzacji (dodaj jeśli przywracasz też przyciski logowania) === */
+.user-auth-panel {
+    text-align: right;
+    margin-top: -50px; 
+    margin-bottom: 20px;
+}
+
+.user-auth-panel button {
+    background-color: #ff9900; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.user-auth-panel button:hover {
+    background-color: #e68a00;
+}
+
+/* === Formularze Logowania/Rejestracji (dodaj jeśli przywracasz formularze) === */
+.user-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 3px solid #f9d71c; 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.user-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.user-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.user-form button {
+    width: 100%;
+    background-color: #5cb85c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.user-form button:hover {
+    background-color: #4cae4c;
+}
+
+/* === Panel Konta (dla Modala) === */
+.user-panel {
+    padding: 10px; 
+}
+
+.user-stats p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.user-actions button {
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.user-actions button:hover {
+    background-color: #286090;
 }
