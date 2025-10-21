@@ -1,51 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👑 PRO Tips for Clash Royale 🛡️</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Dodanie minimalnego stylu dla elementu wyboru języka */
-        .language-selector {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            background-color: #f7f7f7;
-            font-size: 16px;
-            cursor: pointer;
-        }
 
-        /* Ustawienie nagłówka na position: relative, jeśli język ma być absolute */
-        header {
-            position: relative; /* Upewnij się, że header ma pozycję, by .language-selector działał */
-        }
-    </style>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>👑 PRO Tips for Clash Royale 🛡️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
+
+
     <header>
-        <select id="language-switcher" class="language-selector" onchange="changeLanguage(this.value)">
-            <option value="pl">Polski 🇵🇱</option>
-            <option value="en">English 🇬🇧</option>
-            <option value="de">Deutsch 🇩🇪</option>
-        </select>
-        <h1 data-pl="👑 CLASH ROYALE: PORADY I PRZEWODNIKI DLA MISTRZÓW 🏆" 
-            data-en="👑 CLASH ROYALE: TIPS AND GUIDES FOR MASTERS 🏆"
-            data-de="👑 CLASH ROYALE: TIPPS UND GUIDES FÜR MEISTER 🏆">
-            👑 CLASH ROYALE: PORADY I PRZEWODNIKI DLA MISTRZÓW 🏆
-        </h1>
-        <p data-pl="Strategie, talie i zaawansowane triki, aby wspiąć się do Legendarnej Areny."
-           data-en="Strategies, decks, and advanced tricks to climb to the Legendary Arena."
-           data-de="Strategien, Decks und fortgeschrittene Tricks, um in die Legendäre Arena aufzusteigen.">
-           Strategie, talie i zaawansowane triki, aby wspiąć się do Legendarnej Areny.
-        </p>
+
+        <h1>👑 CLASH ROYALE: TIPS AND GUIDES FOR MASTERS 🏆</h1>
+
+        <p>Strategies, decks, and advanced tricks to climb to the Legendary Arena.</p>
+
     </header>
 
+
+
     <nav>
+
         <ul>
-            <li><a href
+
+            <li><a href="#ekonomia">💰 Elixir Economy</a></li>
+
+            <li><a href="#karty">🧱 Categories & Archetypes</a></li>
+
+            <li><a href="#budowa">🛠️ Deck Building</a></li>
+
+            <li><a href="#triki">⚔️ Solo Tricks</a></li>
+
+            <li><a href="#ekonomia_gry">💸 Gold and Chests</a></li>
+
+            <li><a href="#teamplay">🤝 2v2 and Clan</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <main>
+
+        
+
+        <section id="ekonomia" class="section-card">
+
+            <h2>I. 💰 Elixir Economy and Card Cycle</h2>
+
+            <p class="intro-text">The most important rule: Elixir is gold. Never let it go to waste by sitting at 10/10!</p>
+
+            
+
+            <div class="tip-grid">
+
+                <div class="tip-item">
+
+                    <h3>Don't Waste Elixir</h3>
+
+                    <p>If you are at 10 Elixir, play a cheap card (1-2 Elixir) to maintain production. Lost seconds equal an advantage for the enemy.</p>
+
+                </div>
+
+                <div class="tip-item">
+
+                    <h3>Trade with Profit</h3>
+
+                    <p>Always aim for your defense to cost less Elixir than the opponent's attack (e.g., destroying a Golem (8) with an Inferno Tower (5) = +3 Elixir advantage!).</p>
+
+                </div>
+
+                <div class="tip-item">
+
+                    <h3>Fast Card Cycle</h3>
+
+                    <p>Use cheap units (Spirit, Skeletons) to quickly "cycle" through your deck to retrieve your key attack card (Win Condition).</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        
+
+        <blockquote class="master-quote">
+
+            "In Clash Royale, you win by defending and counterattacking, not by thoughtlessly spamming at the bridge."
+
+            <cite>– Unknown Arena Master</cite>
+
+        </blockquote>
+
+
+
+        <section id="karty" class="section-card">
+
+            <h2>II. 🧱 Card Categories and Deck Archetypes</h2>
+
+            <p class="intro-text">Understanding the opponent's deck type is key to victory. Counter the style, not just the single card!</p>
+
+
+
+            <h3>Main Deck Archetypes</h3>
+
+            <div class="archetype-grid">
+
+                <div class="archetype-item">
+
+                    <h4>TANK / Beatdown</h4>
+
+                    <p>Relies on a powerful, expensive tank (Golem, Lava Hound, Mega Knight) played from the back to build a huge "push" in the Double Elixir phase.</p>
+
+                </div>
+
+                <div class="archetype-item">
+
+                    <h4>CYCLE / Fast Cycle</h4>
+
+                    <p>Cheap decks (average cost 2.6 - 3.0). Goal: play the key attack card (e.g., Hog Rider or Mortar) as quickly as possible before the opponent prepares a counter.</p>
+
+                </div>
+
+                <div class="archetype-item">
+
+                    <h4>SIEGE / Siege
+
+                    <p>Utilizes buildings (X-Bow, Mortar) that attack towers from a distance, staying on the safe side of the arena. Requires excellent defense.</p>
+
+                </div>
+
+                <div class="archetype-item">
+
+                    <h4>CONTROL / Control</h4>
+
+                    <p>The goal is to "trade" for an Elixir Advantage in defense, and then counterattack with cards like Miner or Goblin Barrel.</p>
+
+                </div>
+
+            </div>
+
+
+
+            <h3>Card Categories (within a Deck)</h3>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Category</th>
+
+                            <th>Examples</th>
+
+                            <th>Role</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>**Win Condition**</td>
+
+                            <td>Hog Rider, Balloon, Royal Giant</td>
+
+                            <td>The key card for destroying towers.</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>**Small Spells**</td>
+
+                            <td>Zap, The Log, Snowball</td>
+
+                            <td>Countering cheap hordes (Skeleton Army, Goblin Barrel).</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>**Big Spells**</td>
+
+                            <td>Fireball, Rocket, Poison</td>
+
+                            <td>Destroying expensive support units/buildings and dealing "damage" to the tower.</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>**Cycle/Tank**</td>
+
+                            <td>Ice Spirit, Skeletons, Knight</td>
+
+                            <td>Generating cycle, "tanking" for support units.</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <section id="budowa" class="section-card">
+
+            <h2>III. 🛠️ Building a Winning Deck</h2>
+
+            <p class="intro-text">A balanced deck should have appropriate counters and a clear win condition.</p>
+
+            
+
+            <div class="tip-grid">
+
+                <div class="tip-item">
+
+                    <h3>Average Cost</h3>
+
+                    <p>Keep the average Elixir cost between 3.0 and 4.2. Decks above 4.5 are very risky in the current meta.</p>
+
+                </div>
+
+                <div class="tip-item">
+
+                    <h3>Air Counter</h3>
+
+                    <p>Always have at least two effective counters against flying units (e.g., Musketeer, Mega Minion, E-Wiz) in your deck.</p>
+
+                </div>
+
+                <div class="tip-item">
+
+                    <h3>Don't Copy Blindly!</h3>
+
+                    <p>Watch how pros play the deck before you start using it. Simply copying the cards is not enough!</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section id="triki" class="section-card">
+
+            <h2>IV. ⚔️ Advanced Tricks and Positioning (1v1)</h2>
+
+
+
+            <div class="advanced-tip-list">
+
+                <article>
+
+                    <h3>King Tower Activation</h3>
+
+                    <p>In defense, deliberately place units (e.g., Ice Golem in the middle) to pull an enemy Miner or Hog Rider and make the King Tower start shooting. You gain a powerful defender.</p>
+
+                </article>
+
+                <article>
+
+                    <h3>Count Enemy Cycle</h3>
+
+                    <p>Remember which spell destroyed your Minion Horde (e.g., Fireball). Knowing the opponent doesn't have it in hand, you can safely play another card vulnerable to the same spell!</p>
+
+                </article>
+
+                <article>
+
+                    <h3>"Kiting" Technique</h3>
+
+                    <p>Use cheap units (Skeletons, Ice Spirit) to pull slow, strong units (P.E.K.K.A., Golem) to the middle of the arena. Both your towers will be able to attack them.</p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        
+
+        <section id="ekonomia_gry" class="section-card gold-section">
+
+            <h2>V. 💸 Gold, Chests, and Progression</h2>
+
+            <p class="intro-text">Gold is the most valuable resource. Save Gems and upgrade wisely!</p>
+
+            
+
+            <ul class="tip-list-vertical">
+
+                <li>**Upgrade with Caution:** Focus on upgrading the 8 cards in your main deck. Wasting gold on unused cards will slow you down for years.</li>
+
+                <li>**Save Gems:** NEVER use Gems to speed up chests. Spend them on Global Challenges or shop offers that give the best Gem-to-Gold/Card ratio.</li>
+
+                <li>**Donate = XP and Gold:** Regularly donating cards in the clan is a free and steady supply of Gold and valuable Experience (XP) for a higher King Tower level.</li>
+
+            </ul>
+
+        </section>
+
+
+
+        <section id="teamplay" class="section-card teamplay-section">
+
+            <h2>VI. 🤝 Teamplay: 2v2 and Clan</h2>
+
+            <p class="intro-text">Cooperation in 2v2 is a completely different game. Coordination is key!</p>
+
+            
+
+            <ul class="tip-list-vertical">
+
+                <li>**Communicate Plays (Emote):** Slightly raising a card (without playing it) shows your ally what you plan, preventing, for example, a double Fireball on a Minion Horde.</li>
+
+                <li>**Double Tank? Double Spell!** If you see your partner playing a tank (e.g., Giant), you should play support (e.g., Wizard). Don't play a second tank – that's an invitation for a P.E.K.K.A. counter.</li>
+
+                <li>**Clan Wars:** Actively participate in Clan Wars – this is the largest source of Gold and Trade Tokens.</li>
+
+            </ul>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>© 2025 Clash Royale Pro Tips. Page created on request. All rights reserved (including trophies).</p>
+
+        <p>Twórcy strony: **Michał Klonecki**, **Franek Moroz**, **Stasiu Surówka**, **Bartek Wiatrak**.</p>
+
+    </footer>
+
+
+
+</body>
+
+</html>
