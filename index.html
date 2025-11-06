@@ -1,23 +1,180 @@
-<main>
-    <section id="tips">
-        <h2>🔥 Zaawansowane Porady Taktyczne</h2>
-        <ul class="tip-list">
-            <li>Naucz się liczyć Elixir, aby zawsze mieć przewagę w kontrataku.</li>
-            <li>Używaj zap jako reset dla Inferno Tower!</li>
-            <li>Nigdy nie stawiaj Golema za King Tower, zanim nie znasz talii przeciwnika.</li>
-        </ul>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 PRO Tips for Clash Royale 🛡️</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styl dla elementu wyboru języka, pozycjonowany względem okna przeglądarki */
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f7f7f7;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 100; /* Upewnienie się, że jest na wierzchu */
+        }
+    </style>
+</head>
+<body>
 
-    <section id="best-decks">
-        <h2>🛡️ Topowe Talie na Ladder</h2>
-        <div class="card-grid">
-            <div class="card">
-                <div class="card-header">Log Bait (3.3 Elixiru)</div>
-                <div class="card-content">
-                    <p>Klasyczny deck polegający na sprowokowaniu przeciwnika do użycia małych zaklęć.</p>
-                    <a href="#" class="btn-primary">Zobacz szczegóły</a>
+    <header>
+        <select id="language-switcher" class="language-selector" onchange="changeLanguage(this.value)">
+            <option value="pl">Polski 🇵🇱</option>
+            <option value="en">English 🇬🇧</option>
+            <option value="de">Deutsch 🇩🇪</option>
+        </select>
+        <h1 data-pl="👑 CLASH ROYALE: PORADY I PRZEWODNIKI DLA MISTRZÓW 🏆" 
+            data-en="👑 CLASH ROYALE: TIPS AND GUIDES FOR MASTERS 🏆"
+            data-de="👑 CLASH ROYALE: TIPPS UND GUIDES FÜR MEISTER 🏆">
+            👑 CLASH ROYALE: PORADY I PRZEWODNIKI DLA MISTRZÓW 🏆
+        </h1>
+        <p data-pl="Strategie, talie i zaawansowane triki, aby wspiąć się do Legendarnej Areny."
+           data-en="Strategies, decks, and advanced tricks to climb to the Legendary Arena."
+           data-de="Strategien, Decks und fortgeschrittene Tricks, um in die Legendäre Arena aufzusteigen.">
+            Strategie, talie i zaawansowane triki, aby wspiąć się do Legendarnej Areny.
+        </p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#strategies" data-pl="Strategie" data-en="Strategies" data-de="Strategien">Strategie</a></li>
+            <li><a href="#decks" data-pl="Najlepsze Talie" data-en="Best Decks" data-de="Beste Decks">Najlepsze Talie</a></li>
+            <li><a href="#arena-guides" data-pl="Przewodniki po Arenach" data-en="Arena Guides" data-de="Arena-Guides">Przewodniki po Arenach</a></li>
+            <li><a href="#contact" data-pl="Kontakt" data-en="Contact" data-de="Kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2 data-pl="👋 Witaj na stronie z poradami!" data-en="👋 Welcome to the PRO Tips page!" data-de="👋 Willkommen auf der PRO-Tipps-Seite!">
+                Witaj na stronie z poradami!
+            </h2>
+            <p data-pl="Opanuj grę Clash Royale dzięki naszym ekskluzywnym wskazówkom i przewodnikom dla mistrzów."
+               data-en="Master Clash Royale with our exclusive tips and guides for masters."
+               data-de="Meistern Sie Clash Royale mit unseren exklusiven Tipps und Anleitungen für Meister.">
+                Opanuj grę Clash Royale dzięki naszym ekskluzywnym wskazówkom.
+            </p>
+        </section>
+
+        <section id="strategies">
+            <h2 data-pl="🔥 Zaawansowane Porady Taktyczne" data-en="🔥 Advanced Tactical Tips" data-de="🔥 Fortgeschrittene Taktik-Tipps">
+                Zaawansowane Porady Taktyczne
+            </h2>
+            <ul class="tip-list">
+                <li data-pl="Naucz się liczyć Elixir, aby zawsze mieć przewagę w kontrataku."
+                    data-en="Learn to count Elixir to always have an advantage in a counter-attack."
+                    data-de="Lernen Sie, Elixier zu zählen, um im Gegenangriff immer einen Vorteil zu haben.">
+                    Naucz się liczyć Elixir, aby zawsze mieć przewagę w kontrataku.
+                </li>
+                <li data-pl="Używaj zap jako reset dla Inferno Tower!"
+                    data-en="Use Zap to reset the Inferno Tower's charge!"
+                    data-de="Nutzen Sie Zap, um die Inferno-Turm-Aufladung zurückzusetzen!">
+                    Używaj zap jako reset dla Inferno Tower!
+                </li>
+                <li data-pl="Nigdy nie stawiaj Golema za King Tower, zanim nie znasz talii przeciwnika."
+                    data-en="Never place Golem behind the King Tower until you know the opponent's deck."
+                    data-de="Stellen Sie den Golem niemals hinter den Königsturm, bevor Sie das Deck des Gegners kennen.">
+                    Nigdy nie stawiaj Golema za King Tower, zanim nie znasz talii przeciwnika.
+                </li>
+            </ul>
+        </section>
+        
+        <section id="decks">
+            <h2 data-pl="🛡️ Topowe Talie na Ladder" data-en="🛡️ Top Ladder Decks" data-de="🛡️ Top Ranglisten-Decks">
+                Topowe Talie na Ladder
+            </h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header" data-pl="Log Bait (3.3 Elixiru)" data-en="Log Bait (3.3 Elixir)" data-de="Log Bait (3.3 Elixier)">
+                        Log Bait (3.3 Elixiru)
+                    </div>
+                    <div class="card-content">
+                        <p data-pl="Klasyczny deck polegający na sprowokowaniu przeciwnika do użycia małych zaklęć."
+                           data-en="A classic deck relying on baiting the opponent to use small spells."
+                           data-de="Ein klassisches Deck, das darauf basiert, den Gegner dazu zu bringen, kleine Zauber zu verwenden.">
+                            Klasyczny deck polegający na sprowokowaniu przeciwnika do użycia małych zaklęć.
+                        </p>
+                        <a href="#deck-logbait" class="btn-primary" 
+                           data-pl="Zobacz szczegóły" data-en="View Details" data-de="Details ansehen">
+                           Zobacz szczegóły
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" data-pl="Hog Cycle (2.6 Elixiru)" data-en="Hog Cycle (2.6 Elixir)" data-de="Hog Cycle (2.6 Elixier)">
+                        Hog Cycle (2.6 Elixiru)
+                    </div>
+                    <div class="card-content">
+                        <p data-pl="Najszybszy deck w grze, idealny do ciągłego nękania wież."
+                           data-en="The fastest deck in the game, perfect for constantly annoying towers."
+                           data-de="Das schnellste Deck im Spiel, perfekt, um Türme ständig zu belästigen.">
+                            Najszybszy deck w grze, idealny do ciągłego nękania wież.
+                        </p>
+                        <a href="#deck-hog" class="btn-primary" 
+                           data-pl="Zobacz szczegóły" data-en="View Details" data-de="Details ansehen">
+                           Zobacz szczegóły
+                        </a>
+                    </div>
                 </div>
             </div>
-            </div>
-    </section>
-</main>
+        </section>
+
+        <section id="arena-guides">
+            <h2 data-pl="🗺️ Przewodniki po Arenach" data-en="🗺️ Arena Guides" data-de="🗺️ Arena-Anleitungen">
+                Przewodniki po Arenach
+            </h2>
+            <p data-pl="Przygotowujemy szczegółowe przewodniki dla każdej Areny. Sprawdź wkrótce!"
+               data-en="We are preparing detailed guides for every Arena. Check back soon!"
+               data-de="Wir bereiten detaillierte Anleitungen für jede Arena vor. Schauen Sie bald wieder vorbei!">
+                Przygotowujemy szczegółowe przewodniki dla każdej Areny. Sprawdź wkrótce!
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Clash Royale PRO Tips. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            console.log("Wybrano język: " + lang);
+            
+            // Funkcja do aktualizacji tekstu na podstawie atrybutów data-lang
+            function updateText(element) {
+                const text = element.getAttribute('data-' + lang);
+                if (text) {
+                    // Aktualizuj textContent dla większości elementów
+                    element.textContent = text;
+                    // Specjalna obsługa atrybutów dla linków, jeśli to potrzebne (tutaj zmieniamy tylko textContent)
+                }
+            }
+
+            // Znajdź wszystkie elementy z atrybutami data-pl (bo to najprawdopodobniej oznacza, że są wielojęzyczne)
+            document.querySelectorAll('[data-pl]').forEach(updateText);
+
+            // Zmień atrybut lang w tagu html
+            document.documentElement.lang = lang;
+            
+            // Opcjonalnie: zapisz wybór języka w LocalStorage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Ustaw język domyślny przy ładowaniu strony (np. z LocalStorage lub "pl")
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialLang = localStorage.getItem('selectedLanguage') || 'pl';
+            document.getElementById('language-switcher').value = initialLang;
+            changeLanguage(initialLang);
+        });
+
+    </script>
+</body>
+</html>
