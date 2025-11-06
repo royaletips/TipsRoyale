@@ -12,81 +12,172 @@
     <header>
         <h1>👑 CLASH ROYALE: TIPS AND GUIDES FOR MASTERS 🏆</h1>
         <p>Strategies, decks, and advanced tricks to climb to the Legendary Arena.</p>
-
-        <div class="main-search-bar">
-            <input type="text" id="main-tip-search-input" placeholder="Wyszukaj globalnie tipy (np. Hog Cycle, P.E.K.K.A.)">
-            <button id="main-search-btn">Szukaj Tipów 🔎</button>
-        </div>
-        <div class="user-auth-panel">
-            <button id="show-register-btn">Zarejestruj się</button>
-            <button id="show-login-btn">Zaloguj się</button>
-            <button id="account-panel-btn" style="display: none;">Mój Panel Konta 👋</button>
-            <button id="logout-btn" style="display: none;">Wyloguj</button>
-        </div>
-
     </header>
 
     <nav>
-        </nav>
+        <ul>
+            <li><a href="#ekonomia">💰 Elixir Economy</a></li>
+            <li><a href="#karty">🧱 Categories & Archetypes</a></li>
+            <li><a href="#budowa">🛠️ Deck Building</a></li>
+            <li><a href="#triki">⚔️ Solo Tricks</a></li>
+            <li><a href="#ekonomia_gry">💸 Gold and Chests</a></li>
+            <li><a href="#teamplay">🤝 2v2 and Clan</a></li>
+        </ul>
+    </nav>
 
     <main>
-
-        <section id="login-form" class="section-card user-form" style="display: none;">
-            </section>
-
-        <section id="register-form" class="section-card user-form" style="display: none;">
-            </section>
-
-        <section id="tips-management" class="section-card">
-            <h2>💡 Tipy Społeczności i Wyszukiwanie</h2>
-            <p class="intro-text">Sprawdź, jakie strategie i triki dodali inni Mistrzowie Areny!</p>
-
-            <div id="all-tips-list" class="tip-grid" style="margin-top: 20px;">
+        
+        <section id="ekonomia" class="section-card">
+            <h2>I. 💰 Elixir Economy and Card Cycle</h2>
+            <p class="intro-text">The most important rule: Elixir is gold. Never let it go to waste by sitting at 10/10!</p>
+            
+            <div class="tip-grid">
+                <div class="tip-item">
+                    <h3>Don't Waste Elixir</h3>
+                    <p>If you are at 10 Elixir, play a cheap card (1-2 Elixir) to maintain production. Lost seconds equal an advantage for the enemy.</p>
                 </div>
+                <div class="tip-item">
+                    <h3>Trade with Profit</h3>
+                    <p>Always aim for your defense to cost less Elixir than the opponent's attack (e.g., destroying a Golem (8) with an Inferno Tower (5) = +3 Elixir advantage!).</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Fast Card Cycle</h3>
+                    <p>Use cheap units (Spirit, Skeletons) to quickly "cycle" through your deck to retrieve your key attack card (Win Condition).</p>
+                </div>
+            </div>
+        </section>
+        
+        <blockquote class="master-quote">
+            "In Clash Royale, you win by defending and counterattacking, not by thoughtlessly spamming at the bridge."
+            <cite>– Unknown Arena Master</cite>
+        </blockquote>
+
+        <section id="karty" class="section-card">
+            <h2>II. 🧱 Card Categories and Deck Archetypes</h2>
+            <p class="intro-text">Understanding the opponent's deck type is key to victory. Counter the style, not just the single card!</p>
+
+            <h3>Main Deck Archetypes</h3>
+            <div class="archetype-grid">
+                <div class="archetype-item">
+                    <h4>TANK / Beatdown</h4>
+                    <p>Relies on a powerful, expensive tank (Golem, Lava Hound, Mega Knight) played from the back to build a huge "push" in the Double Elixir phase.</p>
+                </div>
+                <div class="archetype-item">
+                    <h4>CYCLE / Fast Cycle</h4>
+                    <p>Cheap decks (average cost 2.6 - 3.0). Goal: play the key attack card (e.g., Hog Rider or Mortar) as quickly as possible before the opponent prepares a counter.</p>
+                </div>
+                <div class="archetype-item">
+                    <h4>SIEGE / Siege</h4>
+                    <p>Utilizes buildings (X-Bow, Mortar) that attack towers from a distance, staying on the safe side of the arena. Requires excellent defense.</p>
+                </div>
+                <div class="archetype-item">
+                    <h4>CONTROL / Control</h4>
+                    <p>The goal is to "trade" for an Elixir Advantage in defense, and then counterattack with cards like Miner or Goblin Barrel.</p>
+                </div>
+            </div>
+
+            <h3>Card Categories (within a Deck)</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Examples</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**Win Condition**</td>
+                            <td>Hog Rider, Balloon, Royal Giant</td>
+                            <td>The key card for destroying towers.</td>
+                        </tr>
+                        <tr>
+                            <td>**Small Spells**</td>
+                            <td>Zap, The Log, Snowball</td>
+                            <td>Countering cheap hordes (Skeleton Army, Goblin Barrel).</td>
+                        </tr>
+                        <tr>
+                            <td>**Big Spells**</td>
+                            <td>Fireball, Rocket, Poison</td>
+                            <td>Destroying expensive support units/buildings and dealing "damage" to the tower.</td>
+                        </tr>
+                        <tr>
+                            <td>**Cycle/Tank**</td>
+                            <td>Ice Spirit, Skeletons, Knight</td>
+                            <td>Generating cycle, "tanking" for support units.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="budowa" class="section-card">
+            <h2>III. 🛠️ Building a Winning Deck</h2>
+            <p class="intro-text">A balanced deck should have appropriate counters and a clear win condition.</p>
+            
+            <div class="tip-grid">
+                <div class="tip-item">
+                    <h3>Average Cost</h3>
+                    <p>Keep the average Elixir cost between 3.0 and 4.2. Decks above 4.5 are very risky in the current meta.</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Air Counter</h3>
+                    <p>Always have at least two effective counters against flying units (e.g., Musketeer, Mega Minion, E-Wiz) in your deck.</p>
+                </div>
+                <div class="tip-item">
+                    <h3>Don't Copy Blindly!</h3>
+                    <p>Watch how pros play the deck before you start using it. Simply copying the cards is not enough!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="triki" class="section-card">
+            <h2>IV. ⚔️ Advanced Tricks and Positioning (1v1)</h2>
+
+            <div class="advanced-tip-list">
+                <article>
+                    <h3>King Tower Activation</h3>
+                    <p>In defense, deliberately place units (e.g., Ice Golem in the middle) to pull an enemy Miner or Hog Rider and make the King Tower start shooting. You gain a powerful defender.</p>
+                </article>
+                <article>
+                    <h3>Count Enemy Cycle</h3>
+                    <p>Remember which spell destroyed your Minion Horde (e.g., Fireball). Knowing the opponent doesn't have it in hand, you can safely play another card vulnerable to the same spell!</p>
+                </article>
+                <article>
+                    <h3>"Kiting" Technique</h3>
+                    <p>Use cheap units (Skeletons, Ice Spirit) to pull slow, strong units (P.E.K.K.A., Golem) to the middle of the arena. Both your towers will be able to attack them.</p>
+                </article>
+            </div>
+        </section>
+        
+        <section id="ekonomia_gry" class="section-card gold-section">
+            <h2>V. 💸 Gold, Chests, and Progression</h2>
+            <p class="intro-text">Gold is the most valuable resource. Save Gems and upgrade wisely!</p>
+            
+            <ul class="tip-list-vertical">
+                <li>**Upgrade with Caution:** Focus on upgrading the 8 cards in your main deck. Wasting gold on unused cards will slow you down for years.</li>
+                <li>**Save Gems:** NEVER use Gems to speed up chests. Spend them on Global Challenges or shop offers that give the best Gem-to-Gold/Card ratio.</li>
+                <li>**Donate = XP and Gold:** Regularly donating cards in the clan is a free and steady supply of Gold and valuable Experience (XP) for a higher King Tower level.</li>
+            </ul>
+        </section>
+
+        <section id="teamplay" class="section-card teamplay-section">
+            <h2>VI. 🤝 Teamplay: 2v2 and Clan</h2>
+            <p class="intro-text">Cooperation in 2v2 is a completely different game. Coordination is key!</p>
+            
+            <ul class="tip-list-vertical">
+                <li>**Communicate Plays (Emote):** Slightly raising a card (without playing it) shows your ally what you plan, preventing, for example, a double Fireball on a Minion Horde.</li>
+                <li>**Double Tank? Double Spell!** If you see your partner playing a tank (e.g., Giant), you should play support (e.g., Wizard). Don't play a second tank – that's an invitation for a P.E.K.K.A. counter.</li>
+                <li>**Clan Wars:** Actively participate in Clan Wars – this is the largest source of Gold and Trade Tokens.</li>
+            </ul>
         </section>
 
     </main>
 
     <footer>
-        </footer>
-
-    <div id="account-modal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            
-            <section id="account-panel" class="user-panel">
-                <h2>Mój Panel Konta <span id="welcome-user"></span></h2>
-                <p class="intro-text">Zarządzaj swoimi tipami i profilem.</p>
-
-                <div class="user-stats">
-                    <p><strong>Nazwa Użytkownika:</strong> <span id="display-username"></span></p>
-                    <p><strong>Twoje Tipów:</strong> <span id="user-tips-count">0</span></p>
-                    <p><strong>Opis Konta:</strong> <span id="user-description-display">Brak opisu</span></p>
-                </div>
-                
-                <div class="user-actions">
-                    <button id="show-create-tip-btn">➕ Dodaj Nowego Tipa</button>
-                    <button id="show-my-tips-btn">📋 Zobacz Moje Tipy</button>
-                    <button id="show-edit-profile-btn">⚙️ Edytuj Profil</button> </div>
-                
-                <div id="create-tip-area" style="display: none; margin-top: 20px;">
-                    </div>
-
-                <div id="my-tips-area" style="display: none; margin-top: 20px;">
-                    </div>
-                
-                <div id="edit-profile-area" style="display: none; margin-top: 20px;">
-                    <h3>Edytuj Profil</h3>
-                    <form id="edit-profile-form">
-                        <label for="edit-description">Opis Konta (Max 150 znaków):</label>
-                        <textarea id="edit-description" rows="3" maxlength="150"></textarea>
-                        <button type="submit">Zapisz Zmiany</button>
-                    </form>
-                </div>
-                </section>
-        </div>
-    </div>
-    <script src="app.js"></script>
+        <p>© 2025 Clash Royale Pro Tips. Page created on request. All rights reserved (including trophies).</p>
+    </footer>
 
 </body>
 </html>
