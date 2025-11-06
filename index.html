@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pl"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>👑 PRO Tips for Clash Royale 🛡️</title>
@@ -18,7 +17,53 @@
             background-color: #f7f7f7;
             font-size: 16px;
             cursor: pointer;
-            z-index: 100; /* Upewnienie się, że jest na wierzchu */
+            z-index: 100;
+        }
+
+        /* Dodatkowe style dla ukrycia/pokazania sekcji oraz panelu admina */
+        .hidden {
+            display: none !important;
+        }
+        #admin-panel {
+            background-color: #fce4ec; /* Jasnoróżowe tło dla odróżnienia */
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 2px solid #8a2be2;
+        }
+        #admin-panel h2 {
+            color: #8a2be2;
+        }
+        #login-form input[type="text"], #login-form input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #login-form button, .admin-button {
+            background-color: #8a2be2;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #login-form button:hover, .admin-button:hover {
+            background-color: #6a1b9a;
+        }
+        .admin-tip-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .admin-tip-item textarea {
+            width: 100%;
+            min-height: 80px;
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -46,8 +91,7 @@
         <ul>
             <li><a href="#strategies" data-pl="Strategie" data-en="Strategies" data-de="Strategien">Strategie</a></li>
             <li><a href="#decks" data-pl="Najlepsze Talie" data-en="Best Decks" data-de="Beste Decks">Najlepsze Talie</a></li>
-            <li><a href="#arena-guides" data-pl="Przewodniki po Arenach" data-en="Arena Guides" data-de="Arena-Guides">Przewodniki po Arenach</a></li>
-            <li><a href="#contact" data-pl="Kontakt" data-en="Contact" data-de="Kontakt">Kontakt</a></li>
+            <li><a href="#admin" data-pl="Panel Admina" data-en="Admin Panel" data-de="Admin-Panel">Panel Admina</a></li>
         </ul>
     </nav>
 
@@ -67,75 +111,45 @@
             <h2 data-pl="🔥 Zaawansowane Porady Taktyczne" data-en="🔥 Advanced Tactical Tips" data-de="🔥 Fortgeschrittene Taktik-Tipps">
                 Zaawansowane Porady Taktyczne
             </h2>
-            <ul class="tip-list">
-                <li data-pl="Naucz się liczyć Elixir, aby zawsze mieć przewagę w kontrataku."
-                    data-en="Learn to count Elixir to always have an advantage in a counter-attack."
-                    data-de="Lernen Sie, Elixier zu zählen, um im Gegenangriff immer einen Vorteil zu haben.">
-                    Naucz się liczyć Elixir, aby zawsze mieć przewagę w kontrataku.
-                </li>
-                <li data-pl="Używaj zap jako reset dla Inferno Tower!"
-                    data-en="Use Zap to reset the Inferno Tower's charge!"
-                    data-de="Nutzen Sie Zap, um die Inferno-Turm-Aufladung zurückzusetzen!">
-                    Używaj zap jako reset dla Inferno Tower!
-                </li>
-                <li data-pl="Nigdy nie stawiaj Golema za King Tower, zanim nie znasz talii przeciwnika."
-                    data-en="Never place Golem behind the King Tower until you know the opponent's deck."
-                    data-de="Stellen Sie den Golem niemals hinter den Königsturm, bevor Sie das Deck des Gegners kennen.">
-                    Nigdy nie stawiaj Golema za King Tower, zanim nie znasz talii przeciwnika.
-                </li>
-            </ul>
+            <ul class="tip-list" id="tip-list-content">
+                </ul>
         </section>
         
-        <section id="decks">
-            <h2 data-pl="🛡️ Topowe Talie na Ladder" data-en="🛡️ Top Ladder Decks" data-de="🛡️ Top Ranglisten-Decks">
-                Topowe Talie na Ladder
-            </h2>
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-header" data-pl="Log Bait (3.3 Elixiru)" data-en="Log Bait (3.3 Elixir)" data-de="Log Bait (3.3 Elixier)">
-                        Log Bait (3.3 Elixiru)
-                    </div>
-                    <div class="card-content">
-                        <p data-pl="Klasyczny deck polegający na sprowokowaniu przeciwnika do użycia małych zaklęć."
-                           data-en="A classic deck relying on baiting the opponent to use small spells."
-                           data-de="Ein klassisches Deck, das darauf basiert, den Gegner dazu zu bringen, kleine Zauber zu verwenden.">
-                            Klasyczny deck polegający na sprowokowaniu przeciwnika do użycia małych zaklęć.
-                        </p>
-                        <a href="#deck-logbait" class="btn-primary" 
-                           data-pl="Zobacz szczegóły" data-en="View Details" data-de="Details ansehen">
-                           Zobacz szczegóły
-                        </a>
-                    </div>
-                </div>
+        <section id="decks" class="hidden">
+             </section>
 
-                <div class="card">
-                    <div class="card-header" data-pl="Hog Cycle (2.6 Elixiru)" data-en="Hog Cycle (2.6 Elixir)" data-de="Hog Cycle (2.6 Elixier)">
-                        Hog Cycle (2.6 Elixiru)
-                    </div>
-                    <div class="card-content">
-                        <p data-pl="Najszybszy deck w grze, idealny do ciągłego nękania wież."
-                           data-en="The fastest deck in the game, perfect for constantly annoying towers."
-                           data-de="Das schnellste Deck im Spiel, perfekt, um Türme ständig zu belästigen.">
-                            Najszybszy deck w grze, idealny do ciągłego nękania wież.
-                        </p>
-                        <a href="#deck-hog" class="btn-primary" 
-                           data-pl="Zobacz szczegóły" data-en="View Details" data-de="Details ansehen">
-                           Zobacz szczegóły
-                        </a>
-                    </div>
-                </div>
+        <section id="admin">
+            <h2 data-pl="🔐 Panel Logowania Admina" data-en="🔐 Admin Login Panel" data-de="🔐 Admin-Login-Panel">
+                Panel Logowania Admina
+            </h2>
+            <div id="login-container">
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Login" required><br>
+                    <input type="password" id="password" placeholder="Hasło" required><br>
+                    <button type="submit" data-pl="Zaloguj" data-en="Login" data-de="Anmelden">Zaloguj</button>
+                    <p id="login-message" style="color: red; margin-top: 10px;"></p>
+                </form>
             </div>
-        </section>
 
-        <section id="arena-guides">
-            <h2 data-pl="🗺️ Przewodniki po Arenach" data-en="🗺️ Arena Guides" data-de="🗺️ Arena-Anleitungen">
-                Przewodniki po Arenach
-            </h2>
-            <p data-pl="Przygotowujemy szczegółowe przewodniki dla każdej Areny. Sprawdź wkrótce!"
-               data-en="We are preparing detailed guides for every Arena. Check back soon!"
-               data-de="Wir bereiten detaillierte Anleitungen für jede Arena vor. Schauen Sie bald wieder vorbei!">
-                Przygotowujemy szczegółowe przewodniki dla każdej Areny. Sprawdź wkrótce!
-            </p>
+            <div id="admin-panel" class="hidden">
+                <h2 data-pl="Panel Administracyjny: Edycja Porad" data-en="Admin Panel: Tip Editor" data-de="Admin-Panel: Tipp-Editor">
+                    Panel Administracyjny: Edycja Porad
+                </h2>
+                
+                <h3>Dodaj nowy Tip</h3>
+                <div id="add-new-tip" style="border: 1px solid #ffd700; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+                    <label>PL:</label><textarea id="new-tip-pl" placeholder="Tip po polsku"></textarea><br>
+                    <label>EN:</label><textarea id="new-tip-en" placeholder="Tip po angielsku"></textarea><br>
+                    <label>DE:</label><textarea id="new-tip-de" placeholder="Tip po niemiecku"></textarea><br>
+                    <button class="admin-button" onclick="addTip()" data-pl="Dodaj Tip" data-en="Add Tip" data-de="Tipp hinzufügen">Dodaj Tip</button>
+                </div>
+                
+                <h3>Edytuj istniejące Tip-y</h3>
+                <div id="tip-editor-list">
+                    </div>
+
+                <button class="admin-button" onclick="logout()" style="margin-top: 20px;" data-pl="Wyloguj" data-en="Logout" data-de="Abmelden">Wyloguj</button>
+            </div>
         </section>
 
     </main>
@@ -145,36 +159,178 @@
     </footer>
 
     <script>
+        // --- DANE STARTOWE (Tipy) ---
+        const INITIAL_TIPS = [
+            { id: 1, pl: "Naucz się liczyć Elixir, aby zawsze mieć przewagę w kontrataku.", en: "Learn to count Elixir to always have an advantage in a counter-attack.", de: "Lernen Sie, Elixier zu zählen, um im Gegenangriff immer einen Vorteil zu haben." },
+            { id: 2, pl: "Używaj zap jako reset dla Inferno Tower!", en: "Use Zap to reset the Inferno Tower's charge!", de: "Nutzen Sie Zap, um die Inferno-Turm-Aufladung zurückzusetzen!" },
+            { id: 3, pl: "Nigdy nie stawiaj Golema za King Tower, zanim nie znasz talii przeciwnika.", en: "Never place Golem behind the King Tower until you know the opponent's deck.", de: "Stellen Sie den Golem niemals hinter den Königsturm, bevor Sie das Deck des Gegners kennen." },
+        ];
+        
+        let tips = [];
+        const ADMIN_LOGIN = "Astralis2137";
+        const ADMIN_PASS = "2025AstraXAq";
+        let nextTipId = 1;
+
+
+        // --- FUNKCJE JĘZYKOWE (changeLanguage) ---
         function changeLanguage(lang) {
-            console.log("Wybrano język: " + lang);
-            
-            // Funkcja do aktualizacji tekstu na podstawie atrybutów data-lang
             function updateText(element) {
                 const text = element.getAttribute('data-' + lang);
                 if (text) {
-                    // Aktualizuj textContent dla większości elementów
                     element.textContent = text;
-                    // Specjalna obsługa atrybutów dla linków, jeśli to potrzebne (tutaj zmieniamy tylko textContent)
                 }
             }
-
-            // Znajdź wszystkie elementy z atrybutami data-pl (bo to najprawdopodobniej oznacza, że są wielojęzyczne)
             document.querySelectorAll('[data-pl]').forEach(updateText);
-
-            // Zmień atrybut lang w tagu html
             document.documentElement.lang = lang;
-            
-            // Opcjonalnie: zapisz wybór języka w LocalStorage
             localStorage.setItem('selectedLanguage', lang);
+            renderTips(lang); // Przeładuj tipy przy zmianie języka
         }
 
-        // Ustaw język domyślny przy ładowaniu strony (np. z LocalStorage lub "pl")
-        document.addEventListener('DOMContentLoaded', () => {
-            const initialLang = localStorage.getItem('selectedLanguage') || 'pl';
-            document.getElementById('language-switcher').value = initialLang;
-            changeLanguage(initialLang);
+        // --- FUNKCJE PANELU ADMINA ---
+
+        function loadTips() {
+            const storedTips = localStorage.getItem('clashRoyaleTips');
+            if (storedTips) {
+                tips = JSON.parse(storedTips);
+                // Ustawienie następnego ID (dla nowych tipów)
+                const maxId = tips.reduce((max, tip) => Math.max(max, tip.id), 0);
+                nextTipId = maxId + 1;
+            } else {
+                tips = INITIAL_TIPS;
+                saveTips();
+            }
+        }
+
+        function saveTips() {
+            localStorage.setItem('clashRoyaleTips', JSON.stringify(tips));
+            // Po zapisaniu, przeładuj widok główny i edytor
+            renderTips(document.documentElement.lang);
+            if (!document.getElementById('admin-panel').classList.contains('hidden')) {
+                renderAdminEditor();
+            }
+        }
+
+        function renderTips(lang) {
+            const ul = document.getElementById('tip-list-content');
+            ul.innerHTML = ''; // Wyczyść listę
+
+            tips.forEach(tip => {
+                const li = document.createElement('li');
+                li.textContent = tip[lang] || tip.pl; // Wyświetl wybrany język lub polski jako fallback
+                ul.appendChild(li);
+            });
+        }
+        
+        function renderAdminEditor() {
+            const editorList = document.getElementById('tip-editor-list');
+            editorList.innerHTML = '';
+            
+            tips.forEach(tip => {
+                const div = document.createElement('div');
+                div.className = 'admin-tip-item';
+                div.innerHTML = `
+                    <p>ID: ${tip.id}</p>
+                    <label>PL:</label><textarea id="tip-pl-${tip.id}">${tip.pl}</textarea><br>
+                    <label>EN:</label><textarea id="tip-en-${tip.id}">${tip.en}</textarea><br>
+                    <label>DE:</label><textarea id="tip-de-${tip.id}">${tip.de}</textarea><br>
+                    <button class="admin-button" onclick="editTip(${tip.id})">Zapisz</button>
+                    <button class="admin-button" onclick="deleteTip(${tip.id})" style="background-color: #e74c3c;">Usuń</button>
+                `;
+                editorList.appendChild(div);
+            });
+        }
+
+        function addTip() {
+            const pl = document.getElementById('new-tip-pl').value.trim();
+            const en = document.getElementById('new-tip-en').value.trim();
+            const de = document.getElementById('new-tip-de').value.trim();
+
+            if (!pl || !en || !de) {
+                alert("Wszystkie pola językowe muszą być wypełnione!");
+                return;
+            }
+
+            const newTip = {
+                id: nextTipId++,
+                pl: pl,
+                en: en,
+                de: de
+            };
+            tips.push(newTip);
+            saveTips();
+            
+            // Wyczyść formularz
+            document.getElementById('new-tip-pl').value = '';
+            document.getElementById('new-tip-en').value = '';
+            document.getElementById('new-tip-de').value = '';
+        }
+
+        function editTip(id) {
+            const tipIndex = tips.findIndex(t => t.id === id);
+            if (tipIndex === -1) return;
+
+            tips[tipIndex].pl = document.getElementById(`tip-pl-${id}`).value;
+            tips[tipIndex].en = document.getElementById(`tip-en-${id}`).value;
+            tips[tipIndex].de = document.getElementById(`tip-de-${id}`).value;
+            
+            saveTips();
+            alert(`Tip #${id} zapisany!`);
+        }
+
+        function deleteTip(id) {
+            if (!confirm("Czy na pewno chcesz usunąć ten tip?")) return;
+            tips = tips.filter(t => t.id !== id);
+            saveTips();
+            renderAdminEditor(); // Odśwież widok edytora po usunięciu
+        }
+
+        // --- FUNKCJE AUTORYZACJI (Symulowanej) ---
+        
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const msg = document.getElementById('login-message');
+
+            if (user === ADMIN_LOGIN && pass === ADMIN_PASS) {
+                // Udane logowanie
+                document.getElementById('login-container').classList.add('hidden');
+                document.getElementById('admin-panel').classList.remove('hidden');
+                msg.textContent = '';
+                localStorage.setItem('isAdminLoggedIn', 'true');
+                renderAdminEditor(); // Załaduj edytor po zalogowaniu
+            } else {
+                // Nieudane logowanie
+                msg.textContent = 'Błędny login lub hasło!';
+            }
         });
 
+        function logout() {
+            localStorage.removeItem('isAdminLoggedIn');
+            document.getElementById('login-container').classList.remove('hidden');
+            document.getElementById('admin-panel').classList.add('hidden');
+        }
+
+        // --- INITIALIZACJA ---
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTips(); // Ładuj tipy z localStorage
+            
+            // Sprawdzenie statusu logowania przy ładowaniu strony
+            const isLoggedIn = localStorage.getItem('isAdminLoggedIn') === 'true';
+            if (isLoggedIn) {
+                document.getElementById('login-container').classList.add('hidden');
+                document.getElementById('admin-panel').classList.remove('hidden');
+                renderAdminEditor();
+            } else {
+                document.getElementById('login-container').classList.remove('hidden');
+                document.getElementById('admin-panel').classList.add('hidden');
+            }
+
+            // Ustawienie początkowego języka
+            const initialLang = localStorage.getItem('selectedLanguage') || 'pl';
+            document.getElementById('language-switcher').value = initialLang;
+            changeLanguage(initialLang); // Renderuje tipy w wybranym języku
+        });
     </script>
 </body>
 </html>
